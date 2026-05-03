@@ -968,49 +968,39 @@ body.is-revealed .landing {
   mix-blend-mode: multiply;
 }
 
-/* CSS-only decorative ring used when no image is available */
+/* Wedding rings */
 .flower--css {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.flower-css-inner {
+.rings {
+  position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 38% 38%, rgba(255,255,255,0.55) 0%, transparent 55%),
-    conic-gradient(
-      #c4973d 0deg, #e8c870 30deg,
-      #d4ab5a 60deg, #b8882e 90deg,
-      #c4973d 120deg, #e8c870 150deg,
-      #d4ab5a 180deg, #b8882e 210deg,
-      #c4973d 240deg, #e8c870 270deg,
-      #d4ab5a 300deg, #b8882e 330deg,
-      #c4973d 360deg
-    );
-  box-shadow:
-    0 0 0 6px rgba(253,249,244,0.9),
-    0 0 0 10px rgba(196,151,61,0.25),
-    0 20px 60px rgba(26,18,8,0.3);
-  position: relative;
-}
-
-.flower-css-inner::after {
-  content: "C & M";
-  position: absolute;
-  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--serif);
-  font-size: clamp(2rem, 10vw, 5rem);
-  font-style: italic;
-  color: rgba(255,255,255,0.92);
-  text-shadow: 0 2px 12px rgba(26,18,8,0.4);
-  pointer-events: none;
+  filter: drop-shadow(0 12px 32px rgba(26, 18, 8, 0.28));
 }
+
+.ring {
+  position: absolute;
+  width: 52%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: clamp(8px, 2.5vw, 18px) solid transparent;
+  background:
+    linear-gradient(#f5ede0, #f5ede0) padding-box,
+    linear-gradient(145deg, #f0d060, #c4973d, #e8c870, #a87828, #e0b850) border-box;
+  box-shadow:
+    inset 0 2px 6px rgba(255,255,255,0.6),
+    inset 0 -2px 4px rgba(26,18,8,0.2);
+}
+
+.ring-left  { transform: translateX(22%); z-index: 1; }
+.ring-right { transform: translateX(-22%); z-index: 2; }
 
 .flower.is-gone {
   animation: flower-fly 0.52s cubic-bezier(0.4, 0, 0.7, 1) forwards;
