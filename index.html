@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boda César & María</title>
+    <meta name="description" content="Sábado, 6 de Junio 2026 · 4:00 PM · Hacienda Los Ángeles, Jutiapa – Catacamas, Olancho" />
+
+    <!-- Open Graph / WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Boda César & María" />
+    <meta property="og:description" content="Sábado, 6 de Junio 2026 · 4:00 PM · Hacienda Los Ángeles, Jutiapa – Catacamas, Olancho" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+
+      <!-- ░░ FLOWER LAYER — tocar para revelar la invitación ░░ -->
+      <div id="flower-layer" role="presentation" aria-hidden="true">
+
+        <div class="flower flower--css" style="--rot:-8deg; --size:clamp(220px,55vw,420px); top:50%; left:50%;" data-idx="0">
+          <div class="flower-css-inner" aria-hidden="true"></div>
+        </div>
+
+        <p class="flower-hint" id="flower-hint">Toca la flor para abrir tu invitación</p>
+      </div>
+      <!-- ░░ END FLOWER LAYER ░░ -->
+
+      <div class="ambient ambient-left" aria-hidden="true"></div>
+      <div class="ambient ambient-right" aria-hidden="true"></div>
+
+      <section class="intro-screen" id="intro-screen" aria-label="Apertura de invitación">
+        <div class="intro-copy">
+          <p class="eyebrow">Te invitamos a nuestra boda</p>
+          <h1>César<br><span class="amp">&amp;</span><br>María</h1>
+        </div>
+
+        <div
+          class="envelope-scene"
+          id="open-invitation"
+          role="button"
+          tabindex="0"
+          aria-label="Abrir sobre"
+          aria-expanded="false"
+        >
+          <span class="scene-glow" aria-hidden="true"></span>
+          <span class="envelope" aria-hidden="true">
+            <span class="envelope-back"></span>
+
+            <span class="invitation-card" aria-hidden="true">
+              <span class="invitation-card__frame">
+                <span class="invitation-card__crest">C&amp;M</span>
+                <strong class="invitation-card__title">César · María</strong>
+                <span class="invitation-card__date">06 · 06 · 2026</span>
+
+                <button class="read-invitation" id="read-invitation" type="button">
+                  <span>Ver invitación</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+                  </svg>
+                </button>
+              </span>
+            </span>
+
+            <span class="envelope-liner"></span>
+            <span class="envelope-flap"></span>
+            <span class="envelope-front"></span>
+          </span>
+        </div>
+
+        <p class="tap-hint" id="tap-hint">Toca para abrir</p>
+      </section>
+
+      <main class="landing" id="main-content">
+        <header class="hero section">
+          <div class="hero-copy">
+            <h2>
+              Con amor, los unimos
+              <span>en matrimonio</span>
+            </h2>
+            <p class="hero-text">
+              Dos familias, una historia. Los invitamos a ser parte del día más especial de nuestras vidas.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="https://www.google.com/maps/place/PV43%2B22+Hacienda+los+Angeles,+Sector+Jutiapa+-+Catacamas,+Olancho/data=!4m2!3m1!1s0x8f6c190047339cdd:0x9493781e63d1bf69!18m1!1e1?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBzI2LjE3LjUYACDXggMqnQEsOTQyNjc3MjcsOTQyOTIxOTUsOTQyOTk1MzIsMTAwNzk2NDk4LDEwMDc5Nzc2MSwxMDA3OTY1MzUsOTQyODQ0OTksOTQyODA1NzYsOTQyMDczOTQsOTQyMDc1MDYsOTQyMDg1MDYsOTQyMTg2NTMsOTQyMjk4MzksOTQyNzUxNjgsOTQyNzk2MTksOTQyOTIwNzgsMTAwODEwNDU4QgJITg%3D%3D&skid=2be6518c-7f1f-4781-bb1f-3162cc259600&g_st=aw" target="_blank" rel="noreferrer">
+                Ver ubicación
+              </a>
+              <a class="button button-secondary" href="#rsvp">Confirmar</a>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="hero-card hero-card--plaid"></div>
+            <div class="hero-card hero-card--photo">
+              <img src="images/1.webp" alt="César y María" />
+            </div>
+          </div>
+        </header>
+
+        <section class="message section">
+          <div class="section-heading">
+            <h3>Una historia de amor que merece ser celebrada</h3>
+          </div>
+          <p class="message-copy">
+            Nos llena de alegría compartir este día tan esperado con las personas que más amamos. Será una noche llena de emoción, risas, baile y recuerdos que guardaremos para siempre.
+          </p>
+        </section>
+
+        <section class="details-grid section">
+          <article class="detail-card">
+            <h3>Detalles del evento</h3>
+            <dl class="detail-list">
+              <div>
+                <dt>Fecha</dt>
+                <dd>Sábado, 6 de Junio 2026</dd>
+              </div>
+              <div>
+                <dt>Hora</dt>
+                <dd>4:00 PM</dd>
+              </div>
+              <div>
+                <dt>Lugar</dt>
+                <dd>Hacienda Los Ángeles · Sector Jutiapa, Catacamas, Olancho</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="detail-card countdown-card">
+            <h3>¡Falta poco!</h3>
+            <div class="countdown" aria-live="polite">
+              <div class="countdown-item">
+                <span id="days">00</span>
+                <small>días</small>
+              </div>
+              <div class="countdown-item">
+                <span id="hours">00</span>
+                <small>horas</small>
+              </div>
+              <div class="countdown-item">
+                <span id="minutes">00</span>
+                <small>min</small>
+              </div>
+              <div class="countdown-item">
+                <span id="seconds">00</span>
+                <small>seg</small>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="parents section">
+          <div class="section-heading">
+            <h3>Con la bendición de sus padres</h3>
+          </div>
+          <div class="parents-grid">
+            <div class="parents-card">
+              <p class="parents-label">Padres del novio</p>
+              <p class="parents-names">Elvido Álvarez Oseguera<br>&amp; José Antonio Meza</p>
+            </div>
+            <div class="parents-divider" aria-hidden="true">
+              <span>♡</span>
+            </div>
+            <div class="parents-card">
+              <p class="parents-label">Padres de la novia</p>
+              <p class="parents-names">Juan López Lara<br>&amp; Cándida Cruz Martínez</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="dresscode section">
+          <div class="section-heading">
+            <h3>Código de vestimenta</h3>
+          </div>
+          <p class="dresscode-hint">Formal · Tonos tierra, champagne y verde salvia</p>
+          <div class="color-palette">
+            <span class="color-dot" style="background-color: #c4973d;" aria-label="Dorado"></span>
+            <span class="color-dot" style="background-color: #e8d5c4;" aria-label="Champagne"></span>
+            <span class="color-dot" style="background-color: #8a9b7c;" aria-label="Salvia"></span>
+            <span class="color-dot" style="background-color: #c9b9a5;" aria-label="Lino"></span>
+            <span class="color-dot" style="background-color: #2c3d28;" aria-label="Verde bosque"></span>
+          </div>
+        </section>
+
+        <section class="editorial section">
+          <div class="editorial-visual">
+            <figure class="editorial-image editorial-image--large">
+              <img src="images/2.webp" alt="César y María" />
+            </figure>
+            <div class="editorial-texture" aria-hidden="true"></div>
+          </div>
+          <div class="editorial-copy">
+            <p>
+              Cada mirada compartida, cada momento robado, cada risa juntos nos confirmó que esto era para siempre. Hoy, con el corazón lleno, damos el paso más importante de nuestras vidas.
+            </p>
+            <p>
+              Queremos que seas parte de nuestra historia. Tu presencia hará que este día sea aún más inolvidable. Gracias por caminar con nosotros hasta aquí.
+            </p>
+          </div>
+        </section>
+
+        <section class="gallery section">
+          <div class="section-heading">
+            <h3>Nuestra historia</h3>
+          </div>
+          <div class="gallery-grid">
+            <div class="gallery-item"><img src="images/2.webp" alt="César y María" loading="lazy" /></div>
+            <div class="gallery-item"><img src="images/3.webp" alt="César y María" loading="lazy" /></div>
+            <div class="gallery-item"><img src="images/4.webp" alt="César y María" loading="lazy" /></div>
+          </div>
+        </section>
+
+        <section class="rsvp section" id="rsvp">
+          <div class="section-heading">
+            <h3>Confirmación</h3>
+          </div>
+          <p class="rsvp-copy">
+            Por favor confírmanos tu asistencia antes del <span>30 de Mayo 2026</span>.
+          </p>
+          <p class="gift-note">
+            Tu presencia es nuestro mejor regalo. ¡Los esperamos con mucho amor!
+          </p>
+          <div class="rsvp-actions">
+            <a class="button button-primary" href="sms:+50400000000&body=¡Hola! Confirmo mi asistencia a la boda de César y María el 6 de octubre 🌿">
+              Confirmar asistencia
+            </a>
+          </div>
+        </section>
+
+        <footer class="footer section">
+          <p>Con amor, César &amp; María</p>
+          <span>César Daniel Meza Álvarez &amp; María Yojana López Cruz</span>
+        </footer>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
