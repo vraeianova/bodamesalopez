@@ -13,35 +13,19 @@ const FLOWER_FLY = [
 
 function initFlowerLayer() {
   const layer = document.getElementById("flower-layer");
-  if (!layer) return;
+  const btn = document.getElementById("layer-btn");
+  if (!layer || !btn) return;
 
-  const flowers = Array.from(layer.querySelectorAll(".flower"));
   let dismissed = false;
 
   function dismiss() {
     if (dismissed) return;
     dismissed = true;
-
-    flowers.forEach((flower) => {
-      const dir = FLOWER_FLY[parseInt(flower.dataset.idx, 10)];
-      flower.style.setProperty("--fly-x", dir.x);
-      flower.style.setProperty("--fly-y", dir.y);
-      flower.style.setProperty("--fly-spin", dir.spin);
-      flower.classList.add("is-gone");
-    });
-
-    window.setTimeout(() => {
-      window.scrollTo(0, 0);
-      layer.classList.add("is-clearing");
-      window.setTimeout(() => layer.remove(), 900);
-    }, 250);
+    layer.classList.add("is-clearing");
+    window.setTimeout(() => layer.remove(), 900);
   }
 
-  layer.addEventListener("click", dismiss);
-  layer.addEventListener("touchstart", (e) => {
-    e.preventDefault();
-    dismiss();
-  }, { passive: false });
+  btn.addEventListener("click", dismiss);
 }
 
 const elements = {

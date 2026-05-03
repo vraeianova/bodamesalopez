@@ -924,64 +924,19 @@ body.is-revealed .landing {
   pointer-events: none;
 }
 
-.flower {
-  position: absolute;
-  width: var(--size, 250px);
-  aspect-ratio: 1;
-  transform: translate(-50%, -50%) rotate(var(--rot, 0deg)) scale(1);
-  transform-origin: center center;
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
-  will-change: transform, opacity;
-  animation: flower-pop-in 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) both;
-}
-
-.flower[data-idx="0"] { animation-delay: 0.00s; }
-.flower[data-idx="1"] { animation-delay: 0.06s; }
-.flower[data-idx="2"] { animation-delay: 0.10s; }
-.flower[data-idx="3"] { animation-delay: 0.14s; }
-.flower[data-idx="4"] { animation-delay: 0.18s; }
-.flower[data-idx="5"] { animation-delay: 0.22s; }
-.flower[data-idx="6"] { animation-delay: 0.04s; }
-.flower[data-idx="7"] { animation-delay: 0.08s; }
-.flower[data-idx="8"] { animation-delay: 0.12s; }
-
-.flower:hover {
-  filter: drop-shadow(0 6px 18px rgba(196, 151, 61, 0.5)) brightness(1.07);
-}
-
-.flower:active {
-  filter: drop-shadow(0 2px 8px rgba(196, 151, 61, 0.4)) brightness(0.96);
-}
-
-.flower img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  pointer-events: none;
-  -webkit-user-drag: none;
-}
-
-.flower--multiply img {
-  mix-blend-mode: multiply;
-}
-
 /* Wedding rings */
-.flower--css {
+.rings-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(180px, 50vw, 340px);
+  height: clamp(180px, 50vw, 340px);
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.rings {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  filter: drop-shadow(0 12px 32px rgba(26, 18, 8, 0.28));
+  pointer-events: none;
+  animation: flower-pop-in 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
 
 .ring {
@@ -994,12 +949,25 @@ body.is-revealed .landing {
     linear-gradient(#f5ede0, #f5ede0) padding-box,
     linear-gradient(145deg, #f0d060, #c4973d, #e8c870, #a87828, #e0b850) border-box;
   box-shadow:
+    0 8px 28px rgba(26, 18, 8, 0.22),
     inset 0 2px 6px rgba(255,255,255,0.6),
     inset 0 -2px 4px rgba(26,18,8,0.2);
 }
 
 .ring-left  { transform: translateX(22%); z-index: 1; }
 .ring-right { transform: translateX(-22%); z-index: 2; }
+
+.layer-btn {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  -webkit-tap-highlight-color: transparent;
+}
 
 .flower.is-gone {
   animation: flower-fly 0.52s cubic-bezier(0.4, 0, 0.7, 1) forwards;
@@ -1034,31 +1002,8 @@ body.is-revealed .landing {
 }
 
 @keyframes flower-pop-in {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -50%) rotate(var(--rot, 0deg)) scale(0);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%) rotate(var(--rot, 0deg)) scale(1);
-  }
-}
-
-@keyframes flower-fly {
-  0% {
-    opacity: 1;
-    transform: translate(-50%, -50%) rotate(var(--rot, 0deg)) scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform:
-      translate(
-        calc(-50% + var(--fly-x, 150vw)),
-        calc(-50% + var(--fly-y, -100vh))
-      )
-      rotate(calc(var(--rot, 0deg) + var(--fly-spin, 200deg)))
-      scale(0.04);
-  }
+  from { opacity: 0; transform: translate(-50%, -50%) scale(0); }
+  to   { opacity: 1; transform: translate(-50%, -50%) scale(1); }
 }
 
 @keyframes hint-show {
