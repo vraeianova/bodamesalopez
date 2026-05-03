@@ -16,51 +16,32 @@ function initFlowerLayer() {
   if (!layer) return;
 
   const flowers = Array.from(layer.querySelectorAll(".flower"));
-  const hint = document.getElementById("flower-hint");
-  let remaining = flowers.length;
+  let dismissed = false;
 
-  flowers.forEach((flower) => {
-    const idx = parseInt(flower.dataset.idx, 10);
-    const dir = FLOWER_FLY[idx];
+  function dismiss() {
+    if (dismissed) return;
+    dismissed = true;
 
-    flower.style.pointerEvents = "";
-    flower.style.cursor = "pointer";
-
-    const img = flower.querySelector("img");
-    if (img) {
-      flower.style.pointerEvents = "none";
-      flower.style.cursor = "default";
-      const enable = () => { flower.style.pointerEvents = ""; flower.style.cursor = "pointer"; };
-      if (img.complete) enable();
-      else { img.addEventListener("load", enable, { once: true }); img.addEventListener("error", enable, { once: true }); }
-    }
-
-    function brushAway(e) {
-      e.stopPropagation();
-      if (flower.classList.contains("is-gone")) return;
-
+    flowers.forEach((flower) => {
+      const dir = FLOWER_FLY[parseInt(flower.dataset.idx, 10)];
       flower.style.setProperty("--fly-x", dir.x);
       flower.style.setProperty("--fly-y", dir.y);
       flower.style.setProperty("--fly-spin", dir.spin);
       flower.classList.add("is-gone");
+    });
 
-      remaining--;
+    window.setTimeout(() => {
+      window.scrollTo(0, 0);
+      layer.classList.add("is-clearing");
+      window.setTimeout(() => layer.remove(), 900);
+    }, 250);
+  }
 
-      if (remaining === 0) {
-        window.setTimeout(() => {
-          window.scrollTo(0, 0);
-          layer.classList.add("is-clearing");
-          window.setTimeout(() => layer.remove(), 900);
-        }, 250);
-      }
-    }
-
-    flower.addEventListener("click", brushAway);
-    flower.addEventListener("touchstart", (e) => {
-      e.preventDefault();
-      brushAway(e);
-    }, { passive: false });
-  });
+  layer.addEventListener("click", dismiss);
+  layer.addEventListener("touchstart", (e) => {
+    e.preventDefault();
+    dismiss();
+  }, { passive: false });
 }
 
 const elements = {
