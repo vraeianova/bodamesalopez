@@ -165,12 +165,10 @@ a {
 }
 
 .intro-copy h1 .amp {
-  font-size: 0.6em;
+  font-size: 0.75em;
   color: var(--gold-pale);
   font-style: italic;
   font-weight: 400;
-  display: block;
-  line-height: 1.2;
 }
 
 .intro-text,
