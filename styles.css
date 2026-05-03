@@ -282,11 +282,12 @@ a {
   z-index: 2;
   margin: 0.2rem 0;
   font-family: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
-  font-size: clamp(1.6rem, 5vw, 2.8rem);
+  font-size: clamp(1.1rem, 3.5vw, 2rem);
   font-weight: 400;
   font-style: italic;
   letter-spacing: 0.06em;
   color: var(--ink);
+  white-space: nowrap;
 }
 
 .envelope {
