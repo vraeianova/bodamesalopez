@@ -559,6 +559,35 @@ body.is-revealed .landing {
 
 .footer span { display: block; margin-top: 0.6rem; color: var(--muted); line-height: 1.75; font-size: 0.98rem; }
 
+/* ═══ SCROLL FADE ═══ */
+
+.hero,
+.message,
+.details-grid,
+.parents,
+.dresscode,
+.editorial,
+.gallery,
+.rsvp,
+.footer {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.hero.fade-in,
+.message.fade-in,
+.details-grid.fade-in,
+.parents.fade-in,
+.dresscode.fade-in,
+.editorial.fade-in,
+.gallery.fade-in,
+.rsvp.fade-in,
+.footer.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ═══ RESPONSIVE ═══ */
 
 @media (min-width: 760px) {

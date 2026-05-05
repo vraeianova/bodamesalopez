@@ -62,5 +62,23 @@ function startCountdown() {
   countdownInterval = setInterval(updateCountdown, 1000);
 }
 
+function initScrollFade() {
+  const targets = document.querySelectorAll(
+    ".hero, .message, .details-grid, .parents, .dresscode, .editorial, .gallery, .rsvp, .footer"
+  );
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("fade-in");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+
+  targets.forEach((el) => observer.observe(el));
+}
+
 initRingsLayer();
 startCountdown();
+initScrollFade();
