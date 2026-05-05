@@ -267,9 +267,8 @@ body.is-revealed .landing {
 }
 
 .hero-card--photo {
-  top: 0;
-  right: 0;
-  width: min(18rem, 78%);
+  inset: 0;
+  width: 100%;
   aspect-ratio: 0.78;
   border: 0.6rem solid rgba(253, 249, 244, 0.88);
 }
