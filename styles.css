@@ -502,8 +502,8 @@ body.is-revealed .landing {
   height: 62%;
   border-radius: 50% 40% 52% 38%;
   background:
-    radial-gradient(circle at 30% 30%, rgba(138, 155, 124, 0.3), transparent 48%),
-    linear-gradient(135deg, rgba(138, 155, 124, 0.8), rgba(44, 61, 40, 0.85));
+    radial-gradient(circle at 30% 30%, rgba(210, 120, 90, 0.3), transparent 48%),
+    linear-gradient(135deg, rgba(196, 98, 72, 0.85), rgba(160, 70, 50, 0.9));
   box-shadow: var(--shadow-soft);
 }
 
