@@ -348,6 +348,15 @@ body.is-revealed .landing {
 
 .detail-list dd { margin: 0; font-size: 1rem; }
 
+.location-link {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.location-link:hover { color: var(--bg-deep); }
+
 /* ═══ COUNTDOWN ═══ */
 
 .countdown {
