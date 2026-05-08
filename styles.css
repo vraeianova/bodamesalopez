@@ -546,6 +546,8 @@ body.is-revealed .landing {
 
 .gallery-item:hover img { transform: scale(1.04); }
 
+.gallery-item:nth-child(3) img { object-position: 50% 30%; }
+
 /* ═══ RSVP ═══ */
 
 .rsvp { padding: 1rem 0 4rem; }
