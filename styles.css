@@ -306,10 +306,19 @@ body.is-revealed .landing {
 
 .hero-card--photo {
   top: 0;
-  right: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
   width: min(18rem, 82%);
   aspect-ratio: 0.78;
   border: 0.6rem solid rgba(253, 249, 244, 0.88);
+}
+
+@media (min-width: 760px) {
+  .hero-card--photo {
+    left: auto;
+    right: -1rem;
+    transform: none;
+  }
 }
 
 .hero-card--photo img {
