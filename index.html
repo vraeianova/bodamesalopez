@@ -184,6 +184,17 @@
       </main>
     </div>
 
+    <audio id="bg-audio" src="audio.mp3" loop preload="none"></audio>
+
+    <button id="audio-toggle" class="audio-toggle" aria-label="Silenciar música" title="Música">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+        <path d="M13 3.37a1 1 0 0 0-1.447-.894L6.23 5H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h3.23l5.323 2.524A1 1 0 0 0 13 14.63V3.37ZM16.5 8a4.5 4.5 0 0 1-1.5 3.33V4.67A4.5 4.5 0 0 1 16.5 8Zm1.5 0a6 6 0 0 0-3-5.196v10.392A6 6 0 0 0 18 8Z"/>
+      </svg>
+      <svg class="audio-off-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18" style="display:none">
+        <path d="M13 3.37a1 1 0 0 0-1.447-.894L6.23 5H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h3.23l5.323 2.524A1 1 0 0 0 13 14.63V3.37ZM15.47 9.47l1.06-1.06 1.06 1.06 1.415-1.414-1.06-1.06 1.06-1.062-1.414-1.414-1.06 1.06-1.062-1.06-1.414 1.415 1.06 1.06-1.06 1.061 1.414 1.414Z"/>
+      </svg>
+    </button>
+
     <script type="module" src="script.js"></script>
   </body>
 </html>

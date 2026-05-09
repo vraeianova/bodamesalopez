@@ -1,7 +1,33 @@
+function initAudio() {
+  const audio = document.getElementById("bg-audio");
+  const toggle = document.getElementById("audio-toggle");
+  if (!audio || !toggle) return;
+
+  const iconOn = toggle.querySelector("svg:first-of-type");
+  const iconOff = toggle.querySelector(".audio-off-icon");
+
+  toggle.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play();
+      iconOn.style.display = "";
+      iconOff.style.display = "none";
+      toggle.setAttribute("aria-label", "Silenciar música");
+    } else {
+      audio.pause();
+      iconOn.style.display = "none";
+      iconOff.style.display = "";
+      toggle.setAttribute("aria-label", "Activar música");
+    }
+  });
+
+  return audio;
+}
+
 function initRingsLayer() {
   const layer = document.getElementById("flower-layer");
   const btn = document.getElementById("layer-btn");
   const landing = document.getElementById("main-content");
+  const audio = document.getElementById("bg-audio");
   if (!layer || !btn || !landing) return;
 
   let dismissed = false;
@@ -12,6 +38,8 @@ function initRingsLayer() {
 
     layer.classList.add("is-clearing");
     document.body.classList.add("is-revealed");
+
+    if (audio) audio.play().catch(() => {});
 
     landing.setAttribute("tabindex", "-1");
     landing.focus({ preventScroll: true });
@@ -79,6 +107,7 @@ function initScrollFade() {
   targets.forEach((el) => observer.observe(el));
 }
 
+initAudio();
 initRingsLayer();
 startCountdown();
 initScrollFade();

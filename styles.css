@@ -637,6 +637,30 @@ body.is-revealed .landing {
   transform: translateY(0);
 }
 
+/* ═══ AUDIO TOGGLE ═══ */
+
+.audio-toggle {
+  position: fixed;
+  bottom: 1.4rem;
+  right: 1.4rem;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  border: 1px solid rgba(196, 151, 61, 0.4);
+  background: rgba(253, 249, 244, 0.88);
+  backdrop-filter: blur(8px);
+  color: var(--gold);
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.audio-toggle:hover { transform: scale(1.1); background: rgba(253, 249, 244, 1); }
+
 /* ═══ RESPONSIVE ═══ */
 
 @media (min-width: 760px) {
