@@ -210,6 +210,34 @@ body.is-revealed .landing {
   font-size: 0.98rem;
 }
 
+.hero-verse {
+  margin: 2rem 0 0;
+  padding: 1.2rem 1.4rem;
+  border-left: 2px solid var(--gold);
+  background: rgba(212, 171, 90, 0.07);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  max-width: 32rem;
+}
+
+.hero-verse p {
+  margin: 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--bg-deep);
+  line-height: 1.6;
+}
+
+.hero-verse cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  font-style: normal;
+  color: var(--gold);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
 .hero-actions, .rsvp-actions {
   display: flex;
   flex-wrap: wrap;
